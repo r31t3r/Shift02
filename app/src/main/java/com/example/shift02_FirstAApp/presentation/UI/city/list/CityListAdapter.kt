@@ -1,15 +1,16 @@
-package com.example.shift02_FirstAApp
+package com.example.shift02_FirstAApp.presentation.UI.city.list
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.shift02_FirstAApp.R
+import com.example.shift02_FirstAApp.model.entity.City
 
-class CityListAdapter : RecyclerView.Adapter<CityListAdapter.ViewHolder>() {
+class CityListAdapter(private val clickListener:(City) -> Unit) : RecyclerView.Adapter<CityListAdapter.ViewHolder>() {
 
     private val cityList: MutableList<City> = mutableListOf()
-    private var cityListener: CityListener? = null
 
     fun setCityList(newCities: List<City>) {
         cityList.clear()
@@ -18,13 +19,12 @@ class CityListAdapter : RecyclerView.Adapter<CityListAdapter.ViewHolder>() {
         notifyDataSetChanged()
     }
 
-    fun setListener (listener: CityListener) {
-        cityListener= listener
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.city_item, parent, false)
-        return ViewHolder(view, cityListener)
+        return ViewHolder(
+            view,
+            clickListener
+        )
     }
 
     override fun getItemCount(): Int {
@@ -35,19 +35,15 @@ class CityListAdapter : RecyclerView.Adapter<CityListAdapter.ViewHolder>() {
         holder.bind(cityList[position])
     }
 
-    class ViewHolder(itemView: View, private val cityListener: CityListener?): RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View, private val cityListener: (City) -> Unit): RecyclerView.ViewHolder(itemView) {
 
         private val title: TextView = itemView.findViewById(R.id.itemTitle)
 
         fun bind (model: City) {
             title.text = model.title
             itemView.setOnClickListener {
-                cityListener?.onClickCity(model)
+                cityListener(model)
             }
         }
-    }
-
-    interface CityListener{
-        fun onClickCity(model: City)
     }
 }
