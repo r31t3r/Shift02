@@ -1,4 +1,4 @@
-package com.example.shift02_FirstAApp
+package com.example.shift02_FirstAApp.model.entity
 
 import java.io.Serializable
 

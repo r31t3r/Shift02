@@ -1,11 +1,12 @@
-package com.example.shift02_FirstAApp
+package com.example.shift02_FirstAApp.presentation.UI.city.list
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ExpandableListView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.shift02_FirstAApp.R
+import com.example.shift02_FirstAApp.model.entity.City
 
 class CityListAdapter(private val clickListener:(City) -> Unit) : RecyclerView.Adapter<CityListAdapter.ViewHolder>() {
 
@@ -20,7 +21,10 @@ class CityListAdapter(private val clickListener:(City) -> Unit) : RecyclerView.A
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.city_item, parent, false)
-        return ViewHolder(view, clickListener)
+        return ViewHolder(
+            view,
+            clickListener
+        )
     }
 
     override fun getItemCount(): Int {
