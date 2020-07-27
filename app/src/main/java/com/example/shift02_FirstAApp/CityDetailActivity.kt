@@ -9,9 +9,9 @@ class CityDetailActivity: AppCompatActivity () {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_city)
 
-        val parameters = intent.getStringArrayListExtra("City")
+        val parameters = intent.getSerializableExtra("City") as City?
 
-        titleDetail.text = parameters?.get(0)
-        tempDetail.text = parameters?.get(1)
+        titleDetail.text = parameters?.title
+        tempDetail.text = parameters?.temp
     }
 }
