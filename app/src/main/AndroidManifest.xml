@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.shift02_FirstAApp.MainActivity">
+        <activity android:name="com.example.shift02_FirstAApp.presentation.UI.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CityListActivity">
+        <activity android:name="com.example.shift02_FirstAApp.presentation.UI.city.list.CityListActivity">
 
         </activity>
-        <activity android:name=".CityDetailActivity">
+        <activity android:name="com.example.shift02_FirstAApp.presentation.UI.city.CityDetailActivity">
 
         </activity>
     </application>
