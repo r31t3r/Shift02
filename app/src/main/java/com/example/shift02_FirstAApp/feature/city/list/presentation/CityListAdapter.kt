@@ -1,4 +1,4 @@
-package com.example.shift02_FirstAApp.presentation.UI.city.list
+package com.example.shift02_FirstAApp.feature.city.list.presentation
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shift02_FirstAApp.R
-import com.example.shift02_FirstAApp.model.entity.City
+import com.example.shift02_FirstAApp.feature.city.domain.entity.City
 
 class CityListAdapter(private val clickListener:(City) -> Unit) : RecyclerView.Adapter<CityListAdapter.ViewHolder>() {
 

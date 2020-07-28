@@ -1,4 +1,4 @@
-package com.example.shift02_FirstAApp.presentation.viewmodel
+package com.example.shift02_FirstAApp.feature.util.viewmodel
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.LifecycleOwner
