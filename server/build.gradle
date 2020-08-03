@@ -2,7 +2,7 @@ buildscript {
     repositories {
         jcenter()
     }
-    
+
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
@@ -36,5 +36,9 @@ dependencies {
     implementation "io.ktor:ktor-gson:$ktor_version"
     testImplementation "io.ktor:ktor-server-tests:$ktor_version"
 
-    implementation project (":common")
+    implementation project(":common")
+
+    tasks.register("stage") {
+        dependsOn("installDist")
+    }
 }
