@@ -4,5 +4,5 @@ import com.example.common.City
 
 interface CitiesRepository{
 
-    fun getCities() : List<City>
+    suspend fun getCities() : List<City>
 }

@@ -1,1 +1,1 @@
-C:\Users\1\IdeaProjects\Shift02\common\build\classes\kotlin\main\com\example\common\City.class
+C:\Users\1\IdeaProjects\Shift02\common\build\classes\kotlin\main\com\example\common\City.class;C:\Users\1\IdeaProjects\Shift02\common\build\classes\kotlin\main\com\example\common\CreateCityDto.class

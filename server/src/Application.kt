@@ -1,6 +1,5 @@
 package com.example.server
 
-import com.example.common.City
 import com.example.common.CreateCityDto
 import com.example.server.db.DatabaseFactory
 import com.example.server.repository.CityRepository
