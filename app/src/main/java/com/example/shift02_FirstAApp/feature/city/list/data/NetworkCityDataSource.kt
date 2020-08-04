@@ -1,6 +1,7 @@
 package com.example.shift02_FirstAApp.feature.city.list.data
 
-import com.example.shift02_FirstAApp.feature.city.domain.entity.City
+import com.example.common.City
+
 
 interface NetworkCityDataSource {
 

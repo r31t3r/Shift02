@@ -8,8 +8,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.common.City
 import com.example.shift02_FirstAApp.R
-import com.example.shift02_FirstAApp.feature.city.domain.entity.City
 import com.example.shift02_FirstAApp.feature.city.detail.presentation.CityDetailActivity
 import com.example.shift02_FirstAApp.feature.city.list.di.CityListViewModelFactory
 import kotlinx.android.synthetic.main.city_list_activity.*

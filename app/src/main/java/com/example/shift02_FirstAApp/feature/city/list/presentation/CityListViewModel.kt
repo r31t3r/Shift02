@@ -2,7 +2,7 @@ package com.example.shift02_FirstAApp.feature.city.list.presentation
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.shift02_FirstAApp.feature.city.domain.entity.City
+import com.example.common.City
 import com.example.shift02_FirstAApp.feature.city.list.domain.GetCitiesUseCase
 import com.example.shift02_FirstAApp.feature.util.viewmodel.SingleLiveEvent
 
